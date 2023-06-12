@@ -1,7 +1,7 @@
 import React from 'react';
 import {Navigate, NavLink, Route, Routes} from 'react-router-dom'
-import {Registation} from "Registation";
-import {Login} from "Login";
+import {Registation} from "feature/auth/Registation";
+import {Login} from "feature/auth/Login";
 
 
 function App() {

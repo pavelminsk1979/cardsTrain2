@@ -1,5 +1,7 @@
 export const Registation = () => {
   return(
-      <div>registration</div>
+      <div>
+
+      </div>
   )
 }
