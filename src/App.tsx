@@ -1,6 +1,5 @@
 import React from 'react';
 import {Navigate, NavLink, Route, Routes} from 'react-router-dom'
-import {Registation} from "feature/auth/Registation";
 import {Login} from "feature/auth/Login";
 
 
@@ -9,11 +8,9 @@ function App() {
         <div>
 
             <NavLink to={'/login'}>Login--</NavLink>
-            <NavLink to={'/register'}>Registation--</NavLink>
 
 
             <Routes>
-                <Route path="/register" element={<Registation/>}/>
                 <Route path="login" element={<Login/>}/>
 
                 <Route path="/" element={<Navigate to="/login"/>}/>

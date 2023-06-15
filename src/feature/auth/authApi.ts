@@ -1,13 +1,29 @@
 import {instance} from "common/instanceAxios";
 
 export const authApi = {
-    register(payload:any){
-        return instance.post<RegisterType>('auth/register',payload)
+    login (payload:LoginType){
+        return instance.post<LoginResponseType>('auth/login',payload)
     }
 }
 
- type RegisterType = {
+export type LoginType = {
     email: string
     password: string
-    confirmPassword: string
+     rememberMe:boolean
+}
+
+export type LoginResponseType = {
+    avatar?: string;
+    _id: string;
+    email: string;
+    rememberMe: boolean;
+    isAdmin: boolean;
+    name: string;
+    verified: boolean;
+    publicCardPacksCount: number;
+    created: string;
+    updated: string;
+    __v: number;
+    token: string;
+    tokenDeathTime: number;
 }
